@@ -1,0 +1,19 @@
+{{#get "posts" filter="tags:{{primary_tag.slug}}+id:-{{id}}" limit="3" include="authors,tags"}}
+{{#if posts}}
+<!-- Related posts -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 mx-auto text-center">
+                <h3 class="card-title text-dark fw-bold mb-5">{{t "You might also like"}}</h3>
+            </div>
+        </div>
+        <div class="row g-4 justify-content-center">
+            {{#foreach posts  visibility="all"}}
+                {{> post-card}}
+            {{/foreach}}
+        </div>
+    </div>
+</section>
+{{/if}}
+{{/get}}

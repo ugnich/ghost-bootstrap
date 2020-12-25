@@ -1,0 +1,26 @@
+{{!< default}}
+
+
+{{#tag}}
+<div class="py-5"> 
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7 mx-auto text-center">
+                <div>
+                    <h1 class="text-dark mb-3">{{name}}</h1>
+                    <p class="d-flex align-items-center justify-content-center card-text">
+                        {{plural ../pagination.total empty=(t "0 post") singular=(t "% post") plural=(t "% posts")}}
+                    </p>
+                    {{#if description}}
+                        <p class="card-text">{{description}}</p>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{/tag}}
+
+
+{{!-- partials/loop.hbs --}}
+{{> loop}}

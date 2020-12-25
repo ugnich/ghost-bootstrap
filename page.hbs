@@ -1,0 +1,26 @@
+{{!< default}}
+
+{{#post}}
+<div class="blog-section py-5">
+    <div class="container">
+        <div class="row mb-4">
+            <div class="col-md-10 col-lg-8 mx-auto">
+                <div class="card-body">
+                    <h1 class="card-title text-dark fw-bold mb-4">{{title}}</h1>
+                    {{#if custom_excerpt}}
+                    <p class="card-text">{{custom_excerpt}}</p>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+        {{> post-feature}}
+        <div class="row">
+            <div class="col-md-10 col-lg-8 mx-auto">
+                <div class="blog-full-content d-flex flex-column align-items-center text-left">
+                    {{content}} 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{/post}}

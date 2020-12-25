@@ -1,0 +1,53 @@
+{{!< default}}
+
+{{#post}}
+<div class="blog-section py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-lg-8 mx-auto">
+                <div class="card-body">
+                    <div class="mb-3">
+                    {{#foreach tags visibility="public"}}
+                    <a href="{{url}}"  class="badge bg-secondary text-decoration-none text-white fs-6 fw-normal pb-2 me-1 mb-2 text-capitalize">{{name}}</a>
+                    {{/foreach}}
+                    </div>
+                    <h1 class="card-title text-dark fw-bold mb-4">{{title}}</h1>
+                    {{#if custom_excerpt}}
+                    <p class="card-text">{{custom_excerpt}}</p>
+                    {{/if}}
+                </div>
+                <div class="card-footer mt-2 mb-4 d-flex justify-content-between align-items-center bg-transparent border-top-0">
+                    {{#primary_author}}
+                    <div class="author">
+                        <a class="text-decoration-none" href="{{url}}">
+                        {{#if profile_image}}
+                            <img src="{{profile_image}}" class="rounded-circle object-cover" alt="{{name}}" height="40" width="40">
+                        {{/if}}
+                            <span class="text-dark text-capitalize ms-2">{{name}}</span>
+                        </a>
+                    </div>
+                    {{/primary_author}}
+                    <small class="text-muted">{{reading_time minute=(t "1 min read") minutes=(t "% min read")}}</small>
+                </div>
+            </div>
+        </div>
+        {{> post-feature}}
+        <div class="row">
+            <div class="col-md-10 col-lg-8 mx-auto">
+                <div class="blog-full-content d-flex flex-column align-items-center text-left">
+                    {{content}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{{!-- partials/navigation-sec.hbs --}}
+{{> navigation-sec}}
+
+
+{{!-- partials/related_posts.hbs --}}
+{{> "related_posts"}}
+
+{{/post}}

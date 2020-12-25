@@ -1,0 +1,38 @@
+<div class="py-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="row">
+                    <div class="col-lg-6 {{#next_post}} mb-3{{/next_post}}">
+                    {{#prev_post}}
+                        <div class="">
+                            <span>
+                                <a class="text-decoration-none text-dark d-block mb-1" href="{{url}}">
+                                    {{t "Previous Posts"}}
+                                </a>
+                            </span>
+                            <a class="text-dark" href="{{ url }}">
+                                <h5>{{ title }}</h5>
+                            </a>
+                        </div>
+                    {{/prev_post}}
+                    </div>
+                    <div class="col-lg-6 ">
+                    {{#next_post}}
+                        <div class="text-end">
+                            <span>
+                                <a class="text-decoration-none text-dark d-block mb-1 text-end" href="{{url}}">
+                                    {{t "Next Posts"}}
+                                </a>
+                            </span>
+                            <a class="text-end text-dark" href="{{ url }}">
+                                <h5>{{ title }}</h5>
+                            </a>
+                        </div>
+                    {{/next_post}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

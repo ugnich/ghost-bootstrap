@@ -1,0 +1,38 @@
+{{!< default}}
+
+
+{{#author}}
+<div class="py-5">
+    <div class="container"> 
+        <div class="row">
+            <div class="col-md-8 mx-auto text-center">
+                <div>
+                    {{#if profile_image}}
+                    <div class="author mb-3">
+                        <a href="{{url}}">
+                            <img src="{{profile_image}}" class="rounded-circle object-cover" alt="{{name}}" height="70" width="70">
+                        </a>
+                    </div>
+                    {{/if}}
+                    <h3 class="text-dark mb-3 text-capitalize">{{name}}</h3>
+                    <div class="mb-1">
+                        <div class="card-text mb-1">
+                            {{plural ../pagination.total empty=(t "0 post") singular=(t "% post") plural=(t "% posts")}}
+                        </div>
+                        {{#if location}}
+                            <div class="card-text mb-1">{{t "From"}}&nbsp;{{ location }}</div>
+                        {{/if}}
+                    </div>
+                    {{#if bio}}
+                    <p class="card-text">{{bio}}</p>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{/author}}
+
+
+{{!-- partials/loop.hbs --}}
+{{> loop}}

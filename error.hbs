@@ -1,0 +1,34 @@
+{{!< default }}
+
+
+<!-- error-styles start  -->
+<div class="error-content-area mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto py-5">
+                <div class="error-styles text-center">
+                    <h1 class="display-4 fw-bold text-dark">{{statusCode}}</h1>
+                    <p class="mb-3">{{t "Maybe the URL is incorrect, or the page no longer exist."}}</p>
+                    <h4 class="mb-4">{{message}}</h4>
+                    <a class="error-link btn btn-primary text-decoration-none text-white" href="{{@site.url}}">{{t "Go to the front page →"}}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //error-styles end  -->
+
+
+{{#get "posts" limit="3" include="authors,tags"}}
+{{#if posts}}
+<div class="py-5">
+    <div class="container">
+        <div class="row g-4 justify-content-center">
+            {{#foreach posts  visibility="all"}}
+                {{> post-card}}
+            {{/foreach}}
+        </div>
+    </div>
+</div>
+{{/if}}
+{{/get}}
