@@ -1,8 +1,9 @@
 {
-    "name": "demo-ghost",
+    "name": "ghost-bootstrap",
     "description": "theme name is a magazine and news ghost theme",
-    "demo": "https://demo.electronthemes-ghost.com",
+    "demo": "https://demo.domain.com",
     "version": "1.0.0",
+    "license": "MIT",
     "engines": {
         "ghost": ">=3.0.0",
         "ghost-api": "v3"
@@ -10,7 +11,7 @@
     "author": {
         "name": "Electronthemes",
         "email": "electronthemes@gmail.com",
-        "url": "http://electronthemes.com/"
+        "url": "http://electronthemes-ghost.com/"
     },
     "gpm": {
         "type": "theme",
