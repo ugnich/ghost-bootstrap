@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class="no-js" lang="{{@site.lang}}" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{meta_title page=(t "Page %")}}</title>
+    <!-- CSS Files -->
+
+    <link rel="stylesheet" type="text/css" href="{{asset "/css/bootstrap.min.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "/css/style.css"}}" />
+    {{ghost_head}}
+</head>
+
+<body class="{{body_class}}">
+{{!-- Header for all pages --}}
+{{> header}}
+
+{{!-- body --}}
+{{{body}}}
+
+
+
+{{!-- Footer --}}
+{{> footer}}
+
+
+{{!-- Jquery scripts --}}
+<script src="{{asset "/js/bootstrap.min.js"}}"></script>
+
+
+{{#is "post,page"}}
+<script>
+    $(document).ready(function () {
+
+        // Gallery scripts here
+        var galleryImages = document.querySelectorAll('.kg-gallery-image img');
+        galleryImages.forEach(function (image) {
+            var container = image.closest('.kg-gallery-image');
+            var width = image.attributes.width.value;
+            var height = image.attributes.height.value;
+            var ratio = width / height;
+            container.style.flex = ratio + ' 1 0%';
+        });
+
+    })
+</script>
+{{/is}}
+
+
+{{!-- to show block scripts --}}
+{{{block "scripts"}}}
+{{!-- ghost footer --}}
+{{ghost_foot}}
+
+</body>
+</html>
