@@ -11,8 +11,13 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse d-lg-flex justify-content-lg-end" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
         {{{navigation}}}
+        {{#if @site.secondary_navigation}}
+        <div class="d-flex">
+            {{navigation type="secondary"}}
+        </div>
+        {{/if}}
     </div>
   </div>
 </nav>

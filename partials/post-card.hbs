@@ -7,11 +7,11 @@
         </a>
         {{/if}}
         <div class="card-body">
-            <div class="d-flex mb-3 justify-content-between">
+            <div class="mb-3 ">
                 {{#primary_tag}}
                 <a href="{{url}}"  class="badge bg-secondary text-decoration-none text-white fs-6 fw-normal pb-2">{{name}}</a>
                 {{/primary_tag}}
-                <small class="text-muted">{{reading_time minute=(t "1 min read") minutes=(t "% min read")}}</small>
+                
             </div>
             <h4 class="card-title mb-3"><a class="text-decoration-none text-dark" href="{{url}}">{{title}}</a></h4>
             <p class="card-text">{{excerpt}}</p>
@@ -28,7 +28,7 @@
                 </a>
             </div>
             {{/primary_author}}
-            <a class="text-decoration-none" href="{{url}}">{{t "Read More"}}</a>
+            <small class="text-muted">{{reading_time minute=(t "1 min read") minutes=(t "% min read")}}</small>
         </div>
     </div>
 </div>

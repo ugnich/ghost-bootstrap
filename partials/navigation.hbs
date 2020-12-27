@@ -1,7 +1,17 @@
-<ul class="navbar-nav">
-    {{#foreach navigation}}
-    <li class="nav-item">
-        <a class="nav-link text-capitalize {{#if current}} active{{/if}}" aria-current="page" href="{{url}}">{{label}}</a>
-    </li>
-    {{/foreach}}
-</ul>
+{{#if isSecondary}}
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        {{#foreach navigation}}
+        <li class="nav-item">
+            <a class="nav-link text-capitalize {{#if current}} active{{/if}}" aria-current="page" href="{{url}}">{{label}}</a>
+        </li>
+        {{/foreach}}
+    </ul>
+{{else}}
+    <ul class="d-flex navbar-nav me-auto mb-2 mb-lg-0">
+        {{#foreach navigation}}
+        <li class="nav-item">
+            <a class="nav-link text-capitalize {{#if current}} active{{/if}}" aria-current="page" href="{{url}}">{{label}}</a>
+        </li>
+        {{/foreach}}
+    </ul>
+{{/if}}
