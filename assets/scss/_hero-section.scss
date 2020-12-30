@@ -32,5 +32,8 @@ img {
 .blog-full-content {
     * {
         width: 100%;
+        *{
+            width: auto;
+        }
     }
 }

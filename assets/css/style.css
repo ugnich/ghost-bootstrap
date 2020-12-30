@@ -32,6 +32,9 @@ img {
 .blog-full-content * {
   width: 100%;
 }
+.blog-full-content * * {
+  width: auto;
+}
 
 /* Gallery post */
 .kg-gallery-container {
