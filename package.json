@@ -1,7 +1,7 @@
 {
     "name": "ghost-bootstrap",
-    "description": "theme name is a magazine and news ghost theme",
-    "demo": "https://demo.domain.com",
+    "description": "Free Ghost theme for SaaS using Bootstrap 5",
+    "homepage": "https://github.com/ugnich/ghost-bootstrap",
     "version": "1.0.0",
     "license": "MIT",
     "engines": {
@@ -9,8 +9,11 @@
         "ghost-api": "v3"
     },
     "author": {
-        "name": "Electronthemes",
-        "email": "electronthemes@gmail.com",
+        "name": "ugnich",
+        "url": "https://twitter.com/ugnich"
+    },
+    "contributors": {
+        "name": "Enamul Haque",
         "url": "http://electronthemes-ghost.com/"
     },
     "gpm": {
@@ -24,7 +27,8 @@
     "keywords": [
         "ghost",
         "theme",
-        "ghost-theme"
+        "ghost-theme",
+        "bootstrap"
     ],
     "config": {
         "posts_per_page": 6,
